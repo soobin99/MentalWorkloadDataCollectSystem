@@ -1,5 +1,5 @@
 var cnt = 0;
-var maxCnt = 10;
+var maxCnt = 50;
 var imageSequence = [];
 var userAns = [];
 var num = 1;

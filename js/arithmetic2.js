@@ -1,5 +1,5 @@
 var cnt = 0;
-var maxCnt = 10;//200;
+var maxCnt = 50;//200;
 var numberSequence = [];
 var userAns = [];
 var num1 = 1;
@@ -107,7 +107,7 @@ function updateSystem() {
             clearInterval(timerId);
         }, 500);
         setTimeout(function () {
-            location.href = '../End.html';
+            location.href = 'End.html';
             downloadCSV();
         }, 2500); //2.5초 뒤 이미지 생성
     }
