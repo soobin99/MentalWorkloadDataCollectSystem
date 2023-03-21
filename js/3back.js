@@ -1,5 +1,5 @@
 var cnt = 0;
-var maxCnt = 100;
+var maxCnt = 50;
 var imageSequence = [];
 var userAns = [];
 var userClick = [];
@@ -10,7 +10,7 @@ var stop;
 
 function getRandomInt() {
     var randNum = Math.random();
-    if (cnt>3 && randNum <= 0.7){
+    if (cnt>3 && randNum <= 0.4){
         return imageSequence[cnt-2];
     }
     else{
@@ -103,7 +103,7 @@ function updateSystem() {
             clearInterval(timerId);
         }, 500);
         setTimeout(function () {
-            window.location.href = '../End.html';
+            location.href = 'End.html';
             downloadCSV();
         }, 2500); //2.5초 뒤 이미지 생성
     }

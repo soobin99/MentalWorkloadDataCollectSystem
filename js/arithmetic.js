@@ -1,5 +1,5 @@
 var cnt = 0;
-var maxCnt = 100;
+var maxCnt = 50;
 var numberSequence = [];
 var userAns = [];
 var num1 = 1;
@@ -11,7 +11,7 @@ var stop;
 
 function getRandomInt() {
     var randNum = Math.random();
-    if (randNum <= 0.3){
+    if (randNum <= 0.4){
         num1 = Math.floor(Math.random() * 9) + 1;
         num2 = 10-num1;
     }
@@ -103,7 +103,7 @@ function updateSystem() {
             clearInterval(timerId);
         }, 500);
         setTimeout(function () {
-            window.location.href = '../End.html';
+            location.href = 'End.html';
             downloadCSV();
         }, 2500); //2.5초 뒤 이미지 생성
     }

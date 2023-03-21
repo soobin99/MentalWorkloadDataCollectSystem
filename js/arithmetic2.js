@@ -1,5 +1,5 @@
 var cnt = 0;
-var maxCnt = 100;//200;
+var maxCnt = 10;//200;
 var numberSequence = [];
 var userAns = [];
 var num1 = 1;
@@ -12,7 +12,7 @@ var stop;
 
 function getRandomInt() {
     var randNum = Math.random();
-    if (cnt>1 && randNum <= 0.3){
+    if (cnt>1 && randNum <= 0.4){
         num1 = Math.floor(Math.random() * (20-numberSequence[cnt-1]-1)) + 1;
         num2 = 20-numberSequence[cnt-1]-num1;
         if(num2<1) num2=1;
@@ -107,7 +107,7 @@ function updateSystem() {
             clearInterval(timerId);
         }, 500);
         setTimeout(function () {
-            window.location.href = '../End.html';
+            location.href = '../End.html';
             downloadCSV();
         }, 2500); //2.5초 뒤 이미지 생성
     }
